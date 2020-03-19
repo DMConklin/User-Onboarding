@@ -5,7 +5,6 @@ import * as Yup from 'yup';
 const UserForm = (props) => {
     return(
         <Form>
-            {console.log(props)}
             <Field name='name' type="text" placeholder="Full Name" /><br />
             {props.errors.name ? <span>{props.errors.name}</span> : null}<br />
             <Field name="email" type="email" placeholder="Email" /><br />
@@ -38,8 +37,7 @@ export default withFormik({
         tos: Yup.boolean().oneOf([true], 'You Must Agree To The Terms & Conditions')
     }),
     handleSubmit: (values, formikBag) => {
-        console.log(values);
-        console.log(formikBag);
+        formikBag.props.api({...values});
         formikBag.setStatus('Form Submitting');
         formikBag.resetForm();
     }

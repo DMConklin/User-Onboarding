@@ -1,3 +1,4 @@
-import Form from './Form';
+import UserForm from './Form';
+import Users from './Users';
 
-export { Form };
+export { UserForm, Users };
