@@ -11,6 +11,7 @@ const StyledField = styled(Field)`
     background-color: transparent;
     border: 2px solid grey;
     padding: 10px;
+    font-weight: bold;
     &::placeholder {
         text-transform: uppercase;
         font-weight: bold;

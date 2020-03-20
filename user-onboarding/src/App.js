@@ -50,13 +50,19 @@ function App() {
     .catch(err => console.log(err))
   }
 
+  const removeUserHandler = (id) => {
+    setUsers( prevState => {
+      return prevState.filter(user => user.id !== id);
+    })
+  }
+
   return (
     <AppContainerDiv>
       <MainHeader>
           <h1>User Onboarding</h1>
       </MainHeader>
       <UserForm api={apiCall} />
-      <Users users={users} />
+      <Users users={users} removeUser={removeUserHandler} />
     </AppContainerDiv>
   );
 }
