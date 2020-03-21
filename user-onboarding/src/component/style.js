@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import background from '../assets/background.jpeg';
 
 // App.js Styles
@@ -91,8 +91,4 @@ export const StyledField = styled.input`
 export const StyledField2 = styled(StyledField)`
     width: calc(100% - 27px);
     margin: 2px;
-`;
-
-export const TestStyle = css`
-    color: blue;
 `;
