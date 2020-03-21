@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import background from '../assets/background.jpeg';
-
+import { Field } from 'formik';
+ 
 // App.js Styles
 
 export const MainHeader = styled.header`
@@ -76,7 +77,7 @@ export const StyledFormButton = styled.input`
     width: 100%;
 `;
 
-export const StyledField = styled.input`
+export const StyledField = styled(Field)`
     background-color: transparent;
     border: 2px solid grey;
     padding: 10px;

@@ -13,10 +13,10 @@ const UserForm = (props) => {
                 {props.errors.email ? <><span>{props.errors.email}</span><br /></> : null}
                 {props.errors.tos ? <><span>{props.errors.tos}</span><br /></> : null}
 
-                <Field as={StyledField} name='name' type="text" placeholder="Username" />
-                <Field as={StyledField} name="password" type="password" placeholder="Password" /><br />
-                <Field as={StyledField2} name="email" type="email" placeholder="Email" /><br />
-                
+                <StyledField name='name' type="text" placeholder="Username" />
+                <StyledField name="password" type="password" placeholder="Password" /><br />
+                <StyledField2 name="email" type="email" placeholder="Email" /><br />
+             
                 <Field name="tos" type="checkbox" />
                 <label htmlFor="tos">  Terms & Conditions</label><br />
                 
