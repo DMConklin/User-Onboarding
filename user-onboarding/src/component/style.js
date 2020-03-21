@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import background from '../assets/background.jpeg';
 
 // App.js Styles
@@ -76,7 +76,7 @@ export const StyledFormButton = styled.input`
     width: 100%;
 `;
 
-export const FieldStyles = styled.input`
+export const StyledField = styled.input`
     background-color: transparent;
     border: 2px solid grey;
     padding: 10px;
@@ -88,7 +88,11 @@ export const FieldStyles = styled.input`
     }
 `;
 
-export const StyledField2 = styled(FieldStyles)`
+export const StyledField2 = styled(StyledField)`
     width: calc(100% - 27px);
     margin: 2px;
+`;
+
+export const TestStyle = css`
+    color: blue;
 `;

@@ -1,10 +1,7 @@
 import React from 'react';
 import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import styled from 'styled-components';
-import { StyledFieldset, StyledFormButton, FieldStyles, StyledField2 } from './style';
-
-const StyledField = styled(Field)`${FieldStyles}`;
+import { StyledFieldset, StyledFormButton, StyledField, StyledField2 } from './style';
 
 const UserForm = (props) => {
     return(
@@ -16,10 +13,9 @@ const UserForm = (props) => {
                 {props.errors.email ? <><span>{props.errors.email}</span><br /></> : null}
                 {props.errors.tos ? <><span>{props.errors.tos}</span><br /></> : null}
 
-                <StyledField name='name' type="text" placeholder="Username" />
-                <StyledField name="password" type="password" placeholder="Password" /><br />
-                <StyledField2 name="email" type="email" placeholder="Email" /><br />
-                
+                <Field as={StyledField} name='name' type="text" placeholder="Username" />
+                <Field as={StyledField} name="password" type="password" placeholder="Password" /><br />
+                <Field as={StyledField2} name="email" type="email" placeholder="Email" /><br />
                 
                 <Field name="tos" type="checkbox" />
                 <label htmlFor="tos">  Terms & Conditions</label><br />
