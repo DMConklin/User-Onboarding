@@ -2,38 +2,9 @@ import React from 'react';
 import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import styled from 'styled-components';
+import { StyledFieldset, StyledFormButton, FieldStyles, StyledField2 } from './style';
 
-const StyledFieldset = styled.fieldset`
-    border: 2px solid rgb(97,97,97);
-`;
-
-const StyledField = styled(Field)`
-    background-color: transparent;
-    border: 2px solid grey;
-    padding: 10px;
-    font-weight: bold;
-    &::placeholder {
-        text-transform: uppercase;
-        font-weight: bold;
-        color: grey;
-    }
-`;
-
-const StyledField2 = styled(StyledField)`
-    width: calc(100% - 27px);
-    margin: 2px;
-`;
-
-const StyledFormButton = styled.input`
-    border: 1px solid transparent;
-    padding: 10px 0;
-    font-size: 14px;
-    font-weight: bold;
-    width: 75px;
-    color: lightgrey;
-    background-color: grey;
-    width: 100%;
-`;
+const StyledField = styled(Field)`${FieldStyles}`;
 
 const UserForm = (props) => {
     return(

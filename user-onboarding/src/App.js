@@ -2,29 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import axios from 'axios';
 import { UserForm, Users } from './component';
-import styled from 'styled-components';
-import background from './assets/background.jpeg';
-
-const AppContainerDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: proxima-nova-extra-condensed;
-  font-weight: bold;
-  background: url(${background});
-  background-size: cover;
-  min-height: 100vh;
-`;
-
-const MainHeader = styled.header`
-  color: rgba(205,205,205,1);
-  text-shadow: 1px 1px black;
-  background-color: rgba(0,0,0,0.5);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 25px;
-`;
+import { MainHeader, AppContainerDiv } from './component/style';
 
 function App() {
   const [users, setUsers] = useState([{
